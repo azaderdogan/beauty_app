@@ -1,0 +1,8 @@
+include: package:flutter_lints/flutter.yaml
+
+linter:
+  rules:
+    # avoid_print: false  # Uncomment to disable the `avoid_print` rule
+    constant_identifier_names: false # Uncomment to enable the `prefer_single_quotes` rule
+    file_names: false
+    invalid_use_of_protected_member: true
