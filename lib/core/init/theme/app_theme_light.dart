@@ -50,7 +50,7 @@ class AppThemeLight extends AppTheme with ILightTheme {
               ),
             ),
         tabBarTheme: tabBarTheme,
-
+        disabledColor: colorSchemeLight.yellowVariant,
         highlightColor: colorSchemeLight.lightRed,
         dividerColor: colorSchemeLight.mildGrey,
         canvasColor: colorSchemeLight.lightGrey,
@@ -87,6 +87,7 @@ class AppThemeLight extends AppTheme with ILightTheme {
             headline2: textThemeLight!.headline2,
             headline3: textThemeLight!.headline3,
             headline4: textThemeLight!.headline4,
+            headline5: textThemeLight!.headline5,
             bodyText1: textThemeLight!.bodyText,
             overline: textThemeLight!.headline3)
         .apply(

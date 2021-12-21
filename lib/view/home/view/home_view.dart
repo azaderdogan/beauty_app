@@ -1,9 +1,13 @@
+import 'package:beauty_app/core/extensions/num.dart';
 import 'package:beauty_app/core/extensions/padding_insets.dart';
 import 'package:beauty_app/core/widget/sizedBox/dynamic_horizontol_space.dart';
 import 'package:beauty_app/core/widget/sizedBox/dynamic_veritical_space.dart';
 import 'package:beauty_app/product/utils/image_constants.dart';
 import 'package:beauty_app/product/utils/svg_constants.dart';
 import 'package:beauty_app/view/home/home_constants_mixin.dart';
+import 'package:beauty_app/view/home/widgets/best_product_listview.dart';
+import 'package:beauty_app/view/home/widgets/concult_problem_card.dart';
+import 'package:beauty_app/view/home/widgets/seller_product_card.dart';
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
@@ -47,43 +51,21 @@ class HomeView extends BaseView<HomeController> with HomeConstants {
         DynamicVerticalSpace(height: 3.h),
         Text(bestSellerProduct, style: context.textTheme.headline2),
         DynamicVerticalSpace(height: 3.h),
-        Stack(
-          children: [
-            Container(
-              height: 17.6.h,
-              decoration: BoxDecoration(
-                color: context.theme.colorScheme.secondaryVariant,
-                borderRadius: BorderRadius.circular(13),
-              ),
-              child: Row(
-                children: [
-                  Transform.rotate(
-                    angle: 0.1479341073990394,
-                    child: Image.asset(
-                      ImageConstants.instance.cart,
-                      height: 20.h,
-                      width: 50.w,
-                    ),
-                  ),
-                  Transform.rotate(
-                    angle: 0.1479341073990394,
-                    child: Container(
-                      height: 15.h,
-                      width: 10.h,
-                      decoration: BoxDecoration(
-                        image: DecorationImage(
-                          image: AssetImage(ImageConstants.instance.cart),
-                        ),
-                      ),
-                    ),
-                  ),
-                ],
-              ),
-            )
-          ],
-        ),
+        const SellerProductCard(),
         DynamicVerticalSpace(height: 3.h),
         Text(concultYourProblem, style: context.textTheme.headline2),
+        DynamicVerticalSpace(height: 3.h),
+        ConcultProblemCard(
+          problemTitle: problemTitle,
+          problemSubtitle: problemSubtitle,
+          getRsvp: getRsvp,
+        ),
+        DynamicVerticalSpace(height: 3.h),
+        Text(bestProduct, style: context.textTheme.headline2),
+        DynamicVerticalSpace(height: 3.h),
+        const Expanded(
+          child: BestProductListView(),
+        ),
       ],
     );
   }

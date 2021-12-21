@@ -7,4 +7,7 @@ mixin HomeConstants {
   String bestProduct = 'bestProduct'.tr;
   String search = 'search'.tr;
   String name = 'Azad';
+  String problemTitle = 'problemTitle'.tr;
+  String problemSubtitle = 'problemSubtitle'.tr;
+  String getRsvp = 'getRSVP'.tr;
 }

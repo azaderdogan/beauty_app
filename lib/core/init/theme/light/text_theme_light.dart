@@ -42,7 +42,14 @@ class TextThemeLight {
       fontStyle: FontStyle.normal,
       fontSize: 10.0.scpx);
 
-  final TextStyle headline5 = TextStyle();
+  final TextStyle headline5 = TextStyle(
+    fontFamily: ApplicationConstants.FONT_FAMILY_REGULAR,
+    color: const Color(0xff222222),
+    fontSize: 12.scpx,
+    fontWeight: FontWeight.w400,
+    fontStyle: FontStyle.normal,
+    letterSpacing: 0.48,
+  );
   final TextStyle headline6 = TextStyle(
     fontSize: 16.sp,
     fontWeight: FontWeight.bold,

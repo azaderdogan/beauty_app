@@ -32,7 +32,7 @@ class StartApp extends StatelessWidget {
             getPages: AppPages.pages,
             translationsKeys: AppTranslation.translations,
             locale: Get.deviceLocale,
-            fallbackLocale: const Locale('en-us', 'en_US'),
+            fallbackLocale: const Locale('en', 'US'),
             theme: AppThemeLight.instance.theme,
             smartManagement: SmartManagement.full,
             home: HomeView());
