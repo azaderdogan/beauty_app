@@ -1,5 +1,5 @@
-import 'package:beauty_app/view/home/view/home_view.dart';
-import 'package:beauty_app/view/products/view/products_view.dart';
+import 'view/home/view/home_view.dart';
+import 'view/products/view/products_view.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 

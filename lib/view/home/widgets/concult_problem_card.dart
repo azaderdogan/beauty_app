@@ -1,5 +1,5 @@
-import 'package:beauty_app/core/widget/sizedBox/dynamic_veritical_space.dart';
-import 'package:beauty_app/product/utils/image_constants.dart';
+import '../../../core/widget/sizedBox/dynamic_veritical_space.dart';
+import '../../../product/utils/image_constants.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get_utils/src/extensions/context_extensions.dart';
 import 'package:sizer/sizer.dart';

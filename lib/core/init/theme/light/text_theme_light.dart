@@ -1,5 +1,5 @@
-import 'package:beauty_app/core/constants/app/app_constants.dart';
-import 'package:beauty_app/core/extensions/num.dart';
+import '../../../constants/app/app_constants.dart';
+import '../../../extensions/num.dart';
 import 'package:flutter/material.dart';
 import 'package:sizer/sizer.dart';
 

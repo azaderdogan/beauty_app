@@ -10,7 +10,8 @@ class ColorSchemeLight {
   ColorSchemeLight._init();
 
   final Color green = const Color(0xff7bc4b2);
-  final Color blackVariant = const Color(0xff111111);
+  final Color black = const Color(0xff111111);
+  final Color blackVariant = const Color(0xff222222);
   final Color orange = const Color(0xffffe491);
   final Color red = const Color(0xffeb5757);
   final Color redVariant = const Color(0xfffecdcd);
@@ -25,5 +26,4 @@ class ColorSchemeLight {
   final Color deepDarkGrey = const Color(0xff2B2727);
   final Color lightRed = const Color(0xffeb5757);
   final Color backgroundWhite = const Color(0xfffcfcfc);
-
 }

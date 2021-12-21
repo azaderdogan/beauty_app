@@ -1,4 +1,4 @@
-import 'package:beauty_app/product/utils/image_constants.dart';
+import '../../../product/utils/image_constants.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get_utils/src/extensions/context_extensions.dart';
 import 'package:sizer/sizer.dart';

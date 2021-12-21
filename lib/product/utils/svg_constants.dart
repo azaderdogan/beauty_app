@@ -1,4 +1,4 @@
-import 'package:beauty_app/core/extensions/string_extension.dart';
+import '../../core/extensions/string_extension.dart';
 
 class SvgConstants {
   static SvgConstants? _instance;
