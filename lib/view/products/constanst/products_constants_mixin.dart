@@ -1,9 +1,9 @@
-import 'package:beauty_app/product/utils/image_constants.dart';
-import 'package:beauty_app/product/utils/svg_constants.dart';
-import 'package:beauty_app/view/products/model/product.dart';
-import 'package:beauty_app/view/products/model/product_category.dart';
-import 'package:beauty_app/view/products/view/products_view.dart';
 import 'package:get/get_utils/src/extensions/internacionalization.dart';
+
+import '../../../product/utils/image_constants.dart';
+import '../../../product/utils/svg_constants.dart';
+import '../model/product.dart';
+import '../model/product_category.dart';
 
 mixin ProductsConstants {
   final String products = 'products'.tr;
@@ -24,25 +24,25 @@ mixin ProductsConstants {
     ProductCategory(
       categoryId: 0,
       categoryName: 'cleanser'.tr,
-      categoryIconPath: SvgConstants.instance.moisturizer,
+      categoryIconPath: SvgConstants.instance.cleanset,
     ),
     ProductCategory(
       categoryId: 0,
       categoryName: 'lipCare'.tr,
-      categoryIconPath: SvgConstants.instance.moisturizer,
+      categoryIconPath: SvgConstants.instance.skincare,
     ),
     ProductCategory(
       categoryId: 0,
       categoryName: 'masker'.tr,
-      categoryIconPath: SvgConstants.instance.moisturizer,
+      categoryIconPath: SvgConstants.instance.mask,
     ),
     ProductCategory(
       categoryId: 0,
       categoryName: 'powder'.tr,
-      categoryIconPath: SvgConstants.instance.moisturizer,
+      categoryIconPath: SvgConstants.instance.makeUp,
     ),
   ];
-  List<Product> producst = <Product>[
+  List<Product> productList = <Product>[
     Product(
         title: 'Lorem iprsum title lorem ipsum title',
         imagePath: ImageConstants.instance.image5,

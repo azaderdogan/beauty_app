@@ -14,6 +14,7 @@ class SvgConstants {
   String moisturizer = '033-moisturizer'.toSvg;
   String makeUp = '038-make-up-3'.toSvg;
   String skincare = '045-skincare'.toSvg;
+  String cleanset = 'cleanset'.toSvg;
   String calendar = 'calendar'.toSvg;
   String notification = 'notification'.toSvg;
   String heartRed = 'heart-1'.toSvg;
