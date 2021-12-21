@@ -4,7 +4,7 @@ import 'package:beauty_app/core/widget/sizedBox/dynamic_horizontol_space.dart';
 import 'package:beauty_app/core/widget/sizedBox/dynamic_veritical_space.dart';
 import 'package:beauty_app/product/utils/image_constants.dart';
 import 'package:beauty_app/product/utils/svg_constants.dart';
-import 'package:beauty_app/view/home/home_constants_mixin.dart';
+import 'package:beauty_app/view/home/constants/home_constants_mixin.dart';
 import 'package:beauty_app/view/home/widgets/best_product_listview.dart';
 import 'package:beauty_app/view/home/widgets/concult_problem_card.dart';
 import 'package:beauty_app/view/home/widgets/seller_product_card.dart';
