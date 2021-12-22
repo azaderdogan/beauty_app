@@ -1,3 +1,4 @@
+import 'package:beauty_app/core/extensions/context_extension.dart';
 import 'package:flutter/material.dart';
 import 'package:sizer/sizer.dart';
 
@@ -14,17 +15,17 @@ class BestProductListView extends StatelessWidget {
         shrinkWrap: true,
         itemCount: 3,
         scrollDirection: Axis.horizontal,
-        itemBuilder: (context, index) => _buildProductItem(),
+        itemBuilder: (context, index) => _buildProductItem(context),
       ),
     );
   }
 
-  Container _buildProductItem() {
+  Container _buildProductItem(BuildContext context) {
     return Container(
       height: 20.h,
       width: 20.h,
       margin: EdgeInsets.symmetric(horizontal: 10),
-      color: Colors.red,
+      color: context.randomColor.withOpacity(0.4),
     );
   }
 }
