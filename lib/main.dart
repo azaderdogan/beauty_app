@@ -1,3 +1,5 @@
+import 'package:beauty_app/view/product_detail/view/product_detail_view.dart';
+
 import 'view/home/view/home_view.dart';
 import 'view/products/view/products_view.dart';
 import 'package:flutter/material.dart';
@@ -36,7 +38,7 @@ class StartApp extends StatelessWidget {
             fallbackLocale: const Locale('en', 'US'),
             theme: AppThemeLight.instance.theme,
             smartManagement: SmartManagement.full,
-            home: ProductsView());
+            home: HomeView());
       },
     );
   }

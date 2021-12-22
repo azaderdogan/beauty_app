@@ -41,7 +41,7 @@ class AppThemeLight extends AppTheme with ILightTheme {
             toolbarHeight: 5.h,
             iconTheme: IconThemeData(color: Colors.white, size: 21.sp)),
         inputDecorationTheme: inputDecorationTheme(),
-        scaffoldBackgroundColor: colorSchemeLight.white,
+        scaffoldBackgroundColor: colorSchemeLight.backgroundWhite,
         floatingActionButtonTheme:
             ThemeData.light().floatingActionButtonTheme.copyWith(),
         buttonTheme: ThemeData.light().buttonTheme.copyWith(

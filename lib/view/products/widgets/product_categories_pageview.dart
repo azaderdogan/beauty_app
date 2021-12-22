@@ -1,4 +1,3 @@
-
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:sizer/sizer.dart';
@@ -83,6 +82,7 @@ class _ProductCategoriesWidgetState extends State<ProductCategoriesWidget> {
       child: ListView.builder(
         itemCount: widget.categories.length,
         shrinkWrap: true,
+        physics:const  NeverScrollableScrollPhysics(),
         itemBuilder: (BuildContext context, int index) {
           return Padding(
             padding: index == 0 ? EdgeInsets.zero : EdgeInsets.only(top: 2.h),
