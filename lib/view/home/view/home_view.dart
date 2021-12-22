@@ -63,9 +63,7 @@ class HomeView extends BaseView<HomeController> with HomeConstants {
         DynamicVerticalSpace(height: 3.h),
         Text(bestProduct, style: context.textTheme.headline2),
         DynamicVerticalSpace(height: 3.h),
-        const Expanded(
-          child: BestProductListView(),
-        ),
+        BestProductListView(),
       ],
     );
   }
@@ -109,61 +107,6 @@ class HomeView extends BaseView<HomeController> with HomeConstants {
     );
   }
 
-/* 
-  Padding _buildCustomBottomNavBar(BuildContext context) {
-    return Padding(
-      padding: EdgeInsets.only(
-        bottom: 6.2.h,
-      ),
-      child: Container(
-        width: 83.w,
-        height: 7.1.h,
-        padding: EdgeInsets.symmetric(vertical: 1.7.h, horizontal: 6.4.w),
-        margin: EdgeInsets.symmetric(horizontal: 6.9.w),
-        decoration: BoxDecoration(
-            borderRadius: BorderRadius.all(Radius.circular(40)),
-            color: context.theme.backgroundColor,
-            boxShadow: [
-              BoxShadow(
-                color: context.theme.colorScheme.surface.withOpacity(0.2),
-                spreadRadius: 3,
-                blurRadius: 10,
-                offset: Offset(0, 3), // changes position of shadow
-              ),
-            ]),
-        child: Row(
-          mainAxisSize: MainAxisSize.max,
-          children: [
-            Container(
-              height: double.infinity,
-              padding: EdgeInsets.symmetric(vertical: 1.2.h, horizontal: 3.9.w),
-              decoration: BoxDecoration(
-                color: context.theme.colorScheme.primary.withOpacity(0.3),
-                borderRadius: const BorderRadius.all(Radius.circular(40)),
-              ),
-              child: Row(
-                children: [
-                  SvgPicture.asset(
-                    SvgConstants.instance.home,
-                    color: context.theme.colorScheme.primary,
-                    height: 1.8.h,
-                  ),
-                  DynamicHorizontalSpace(
-                    width: 2.1.w,
-                  ),
-                  Text(
-                    'Home',
-                    style: context.textTheme.headline3,
-                  ),
-                ],
-              ),
-            ),
-          ],
-        ),
-      ),
-    );
-  }
- */
   Padding _buildPhotoTitleAndIcons(BuildContext context) {
     return Padding(
       padding: EdgeInsets.only(top: 11.8.h),

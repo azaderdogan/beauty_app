@@ -25,6 +25,7 @@ class MostPopularListView extends StatelessWidget {
       itemCount: productList.length,
       shrinkWrap: true,
       controller: _scrollController,
+      physics: NeverScrollableScrollPhysics(),
       itemBuilder: (BuildContext context, int index) {
         return SizedBox(
           height: 12.8.h,
@@ -61,8 +62,6 @@ class MostPopularListView extends StatelessWidget {
       child: Image.asset(
         productList[index].imagePath,
         fit: BoxFit.contain,
-        height: 12.8.h,
-        width: 12.8.h,
       ),
     );
   }

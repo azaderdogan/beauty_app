@@ -18,10 +18,10 @@ dependencies:
   freezed_annotation: any
   get: ^4.6.1
   json_annotation: any
-  persistent_bottom_nav_bar: ^4.0.2
   sizer: ^2.0.15
   sliding_up_panel: ^2.0.0+1
   vexana: ^2.5.0
+
 
 dev_dependencies:
   build_runner: ^2.1.4
