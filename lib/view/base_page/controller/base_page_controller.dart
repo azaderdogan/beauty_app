@@ -1,3 +1,5 @@
+import 'package:beauty_app/view/calendar/view/calendar_view.dart';
+import 'package:beauty_app/view/product_detail/view/product_detail_view.dart';
 import 'package:flutter/widgets.dart';
 import 'package:get/get.dart';
 import '../../../core/base/controller/base_controller.dart';
@@ -18,10 +20,11 @@ class BasePageController extends BaseController {
   List<BaseView> pages = <BaseView>[
     HomeView(),
     ProductsView(),
+    CalendarView(),
+    ProductDetailView()
   ];
   @override
   void onInit() {
-    // TODO: implement onInit
     pageController = PageController(initialPage: currentIndex);
     super.onInit();
   }

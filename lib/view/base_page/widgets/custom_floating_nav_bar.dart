@@ -26,43 +26,51 @@ class CustomFloatingNavBar extends StatelessWidget {
         height: 7.1.h,
         padding: EdgeInsets.symmetric(vertical: 1.7.h, horizontal: 6.4.w),
         margin: EdgeInsets.symmetric(horizontal: 6.9.w, vertical: 6.9.w),
-        decoration: BoxDecoration(
-            borderRadius: BorderRadius.all(Radius.circular(40)),
-            color: context.theme.backgroundColor,
-            boxShadow: [
-              BoxShadow(
-                color: context.theme.colorScheme.surface.withOpacity(0.2),
-                spreadRadius: 3,
-                blurRadius: 10,
-                offset: Offset(0, 3), // changes position of shadow
-              ),
-            ]),
-        child: Row(
-          mainAxisSize: MainAxisSize.max,
-          mainAxisAlignment: MainAxisAlignment.spaceAround,
-          children: items
-              .asMap()
-              .map(
-                (key, value) {
-                  return MapEntry(
-                    key,
-                    Obx(
-                      () => NavBarItemWidget(
-                        onTap: () => basePageController.changePage(key),
-                        isCurrentItem: basePageController.currentIndex == key,
-                        customFloatingNavBarItem: CustomFloatingNavBarItem(
-                          iconPath: value.iconPath,
-                          text: value.text,
-                        ),
-                      ),
-                    ),
-                  );
-                },
-              )
-              .values
-              .toList(),
-        ),
+        decoration: _buildBoxDecoration(context),
+        child: _buildNavBarItemsRow(),
       ),
+    );
+  }
+
+  BoxDecoration _buildBoxDecoration(BuildContext context) {
+    return BoxDecoration(
+        borderRadius: BorderRadius.all(Radius.circular(40)),
+        color: context.theme.backgroundColor,
+        boxShadow: [
+          BoxShadow(
+            color: context.theme.colorScheme.surface.withOpacity(0.2),
+            spreadRadius: 3,
+            blurRadius: 10,
+            offset: Offset(0, 3), // changes position of shadow
+          ),
+        ]);
+  }
+
+  Row _buildNavBarItemsRow() {
+    return Row(
+      mainAxisSize: MainAxisSize.max,
+      mainAxisAlignment: MainAxisAlignment.spaceAround,
+      children: items
+          .asMap()
+          .map(
+            (key, value) {
+              return MapEntry(
+                key,
+                Obx(
+                  () => NavBarItemWidget(
+                    onTap: () => basePageController.changePage(key),
+                    isCurrentItem: basePageController.currentIndex == key,
+                    customFloatingNavBarItem: CustomFloatingNavBarItem(
+                      iconPath: value.iconPath,
+                      text: value.text,
+                    ),
+                  ),
+                ),
+              );
+            },
+          )
+          .values
+          .toList(),
     );
   }
 }

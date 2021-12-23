@@ -17,5 +17,11 @@ final Map<String, String> enUs = {
   'masker': 'Masker',
   'powder': 'Powder',
   'mostPopular': 'Most Popular',
-  'seeAll': 'See All'
+  'seeAll': 'See All',
+
+  // products detail view
+  'description':'Description',
+  'seeMore':'See More',
+  'comments':'Comments',
+  'buy':'Buy'
 };

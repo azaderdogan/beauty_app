@@ -28,34 +28,44 @@ class NavBarItemWidget extends StatelessWidget {
             : Colors.transparent,
         borderRadius: const BorderRadius.all(Radius.circular(40)),
       ),
-      child: InkWell(
-        onTap: onTap,
-        child: Row(
-          children: [
-            SizedBox(
-              height: 2.h,
-              width: 1.8.h,
-              child: SvgPicture.asset(
-                customFloatingNavBarItem.iconPath,
-                color: isCurrentItem
-                    ? context.theme.colorScheme.primary
-                    : context.theme.colorScheme.surface,
-                fit: BoxFit.fill,
-              ),
-            ),
-            isCurrentItem
-                ? Padding(
-                    padding: EdgeInsets.only(left: 2.1.w),
-                    child: Text(
-                      customFloatingNavBarItem.text,
-                      style: context.textTheme.headline3!.copyWith(
-                        color: context.theme.colorScheme.primary,
-                      ),
-                    ),
-                  )
-                : SizedBox.shrink(),
-          ],
+      child: _buildIconAndText(context),
+    );
+  }
+
+  InkWell _buildIconAndText(BuildContext context) {
+    return InkWell(
+      onTap: onTap,
+      child: Row(
+        children: [
+          _buildIcon(context),
+          isCurrentItem ? _buildText(context) : SizedBox.shrink(),
+        ],
+      ),
+    );
+  }
+
+  Padding _buildText(BuildContext context) {
+    return Padding(
+      padding: EdgeInsets.only(left: 2.1.w),
+      child: Text(
+        customFloatingNavBarItem.text,
+        style: context.textTheme.headline3!.copyWith(
+          color: context.theme.colorScheme.primary,
         ),
+      ),
+    );
+  }
+
+  SizedBox _buildIcon(BuildContext context) {
+    return SizedBox(
+      height: 2.h,
+      width: 1.8.h,
+      child: SvgPicture.asset(
+        customFloatingNavBarItem.iconPath,
+        color: isCurrentItem
+            ? context.theme.colorScheme.primary
+            : context.theme.colorScheme.surface,
+        fit: BoxFit.fill,
       ),
     );
   }

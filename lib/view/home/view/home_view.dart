@@ -51,7 +51,9 @@ class HomeView extends BaseView<HomeController> with HomeConstants {
         DynamicVerticalSpace(height: 3.h),
         Text(bestSellerProduct, style: context.textTheme.headline2),
         DynamicVerticalSpace(height: 3.h),
-        const SellerProductCard(),
+        SellerProductCard(
+          containerHeight: 17.9.h,
+        ),
         DynamicVerticalSpace(height: 3.h),
         Text(concultYourProblem, style: context.textTheme.headline2),
         DynamicVerticalSpace(height: 3.h),
