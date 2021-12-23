@@ -1,15 +1,11 @@
-import 'package:beauty_app/view/base_page/widgets/custom_floating_nav_bar.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/src/widgets/framework.dart';
-import 'package:flutter_svg/svg.dart';
-import 'package:get/get.dart';
-import 'package:get/get_utils/src/extensions/context_extensions.dart';
-import 'package:sizer/sizer.dart';
 
 import '../../../core/base/view/base_view.dart';
-import '../../../core/widget/sizedBox/dynamic_horizontol_space.dart';
 import '../../../product/utils/svg_constants.dart';
 import '../controller/base_page_controller.dart';
+import '../widgets/custom_floating_nav_bar.dart';
+import '../widgets/custom_floating_nav_bar_item.dart';
 
 class BasePageView extends BaseView<BasePageController> {
   @override
@@ -41,14 +37,4 @@ class BasePageView extends BaseView<BasePageController> {
       ],
     );
   }
-}
-
-class CustomFloatingNavBarItem {
-  final String iconPath;
-  final String text;
-
-  CustomFloatingNavBarItem({
-    required this.iconPath,
-    required this.text,
-  });
 }

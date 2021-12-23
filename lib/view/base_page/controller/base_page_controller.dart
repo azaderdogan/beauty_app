@@ -28,7 +28,8 @@ class BasePageController extends BaseController {
 
   void changePage(int index) {
     currentIndex = index;
-    pageController.animateToPage(currentIndex,
-        duration: Duration(milliseconds: 100), curve: Curves.easeIn);
+    pageController.jumpToPage(
+      currentIndex,
+    );
   }
 }

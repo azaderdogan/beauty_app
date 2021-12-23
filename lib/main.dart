@@ -28,18 +28,19 @@ class StartApp extends StatelessWidget {
     return Sizer(
       builder: (context, orientation, deviceType) {
         return GetMaterialApp(
-            debugShowMaterialGrid: false,
-            debugShowCheckedModeBanner: false,
-            defaultTransition: Transition.native,
-            initialBinding: BaseBinding(),
-            title: 'favrea',
-            getPages: AppPages.pages,
-            translationsKeys: AppTranslation.translations,
-            locale: Get.deviceLocale,
-            fallbackLocale: const Locale('en', 'US'),
-            theme: AppThemeLight.instance.theme,
-            smartManagement: SmartManagement.full,
-            home: BasePageView());
+          debugShowMaterialGrid: false,
+          debugShowCheckedModeBanner: false,
+          defaultTransition: Transition.native,
+          initialBinding: BaseBinding(),
+          title: 'favrea',
+          getPages: AppPages.pages,
+          translationsKeys: AppTranslation.translations,
+          locale: Get.deviceLocale,
+          fallbackLocale: const Locale('en', 'US'),
+          theme: AppThemeLight.instance.theme,
+          smartManagement: SmartManagement.full,
+          home: BasePageView(),
+        );
       },
     );
   }
